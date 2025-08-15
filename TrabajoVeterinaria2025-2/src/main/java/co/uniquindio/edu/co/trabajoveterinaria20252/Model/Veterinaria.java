@@ -91,7 +91,7 @@ public class Veterinaria {
     }
 
     //Metodos relacionados a los propietarios
-    private Optional<Persona> buscarPropietario(int cedula) {
+    public Optional<Persona> buscarPropietario(int cedula) {
         return listaPropietarios.stream().filter(p -> p.getCedula() == cedula).findFirst();
     }
 
@@ -109,7 +109,7 @@ public class Veterinaria {
     }
 
     //Metodos relacionados a las mascotas
-    private Optional<Mascota> buscarMascota(int id) {
+    public Optional<Mascota> buscarMascota(int id) {
         return listaMascotas.stream().filter(m -> m.getId() == id).findFirst();
     }
 
@@ -128,7 +128,7 @@ public class Veterinaria {
 
 
     //Metodos relacionados a los veterinarios
-    private Optional<Persona> buscarVeterinario(int cedula) {
+    public Optional<Persona> buscarVeterinario(int cedula) {
         return listaVeterinarios.stream().filter(v -> v.getCedula() == cedula).findFirst();
     }
 
