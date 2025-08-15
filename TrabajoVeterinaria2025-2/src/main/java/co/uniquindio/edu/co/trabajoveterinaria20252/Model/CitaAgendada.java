@@ -52,6 +52,6 @@ public class CitaAgendada {
     public String toString() {
         return "fecha: " + fecha +
                 ", motivo:" + motivo + '\'' +
-                ", mascotaAtendida: " + mascotaAtendida;
+                ", mascota atendida: " + mascotaAtendida;
     }
 }
