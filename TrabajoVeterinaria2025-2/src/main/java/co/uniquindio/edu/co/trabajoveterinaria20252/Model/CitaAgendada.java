@@ -51,7 +51,7 @@ public class CitaAgendada {
     @Override
     public String toString() {
         return "fecha: " + fecha +
-                ", motivo:" + motivo + '\'' +
+                ", motivo: " + motivo +
                 ", mascota atendida: " + mascotaAtendida;
     }
 }

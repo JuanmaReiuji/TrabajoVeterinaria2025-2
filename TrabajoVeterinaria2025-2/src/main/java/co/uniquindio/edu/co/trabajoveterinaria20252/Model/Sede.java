@@ -37,7 +37,7 @@ public class Sede {
 
     @Override
     public String toString() {
-        return "nombre: " + nombre + '\'' +
+        return "nombre: " + nombre +
                 ", nit:" + nit +
                 ", veterinaria asignada: " + veterinariaAsignada;
     }

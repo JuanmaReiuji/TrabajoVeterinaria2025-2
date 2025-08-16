@@ -47,9 +47,9 @@ public class Medicamento {
 
     @Override
     public String toString() {
-        return "nombre: '" + nombre + '\'' +
-                ", cantidad: " + cantidad + '\'' +
-                ", fabricante: " + fabricante + '\'' +
+        return "nombre: " + nombre +
+                ", cantidad: " + cantidad +
+                ", fabricante: " + fabricante +
                 ", codigo: " + codigo;
     }
 }

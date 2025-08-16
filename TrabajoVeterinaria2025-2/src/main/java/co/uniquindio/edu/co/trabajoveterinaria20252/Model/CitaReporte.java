@@ -61,12 +61,12 @@ public class CitaReporte {
 
     @Override
     public String toString() {
-        return "Reporte de la cita:" +
+        return "Reporte de la cita: " +
                 "Asistencia: " + asistencia +
                 ", veterinario asignado: " + veterinarioAsignado +
-                ", detalles de la cita:" + detallesCita +
-                ", tipo de tratamiento:" + tipoTratamiento +
-                ", medicamentos usados para la cita::" + medicamentos;
+                ", detalles de la cita: " + detallesCita +
+                ", tipo de tratamiento: " + tipoTratamiento +
+                ", medicamentos usados para la cita: " + medicamentos;
     }
 }
 

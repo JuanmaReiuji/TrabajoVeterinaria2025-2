@@ -68,8 +68,8 @@ public class Mascota {
     @Override
     public String toString() {
         return "Mascota: " +
-                "nombre: " + nombre + '\'' +
-                ", especie: " + especie + '\'' +
+                "nombre: " + nombre +
+                ", especie: " + especie +
                 ", edad: " + edad +
                 ", id: " + id +
                 ", dueño: " + duenio +

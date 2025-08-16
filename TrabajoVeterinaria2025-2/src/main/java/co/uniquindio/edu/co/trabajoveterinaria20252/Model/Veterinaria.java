@@ -185,13 +185,12 @@ public class Veterinaria {
 
     public boolean buscarCitasMascota(Mascota mascotaABuscar) {
         Optional<Mascota> mAux = buscarMascota(mascotaABuscar.getId());
+        List<CitaAgendada> citasMascota = new ArrayList<>();
 
         if (!mAux.isPresent()) {
             System.out.println("La mascota no existe");
             return false;
         }
-
-        List<CitaAgendada> citasMascota = new ArrayList<>();
 
         for (CitaAgendada citaAux : citasAgendadas) {
             if (citaAux.getMascotaAtendida().getId() == mascotaABuscar.getId()) {
