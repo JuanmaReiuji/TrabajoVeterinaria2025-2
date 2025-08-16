@@ -15,7 +15,6 @@ class SedeTest {
 
     @BeforeEach
     void setUp() {
-        // Recepcionista requerido por el constructor de Veterinaria
         recepcionista = new Recepcionista("Ana", 999, "Cra 1 #2-3", 300000000, "abc123");
 
         veterinaria = new Veterinaria("Vet UQ", 12345, recepcionista);
