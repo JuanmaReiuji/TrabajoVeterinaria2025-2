@@ -69,6 +69,7 @@ public class pantallaLoginMascotaViewController {
             if (mascota.getId() == codigoMascota) { // comparar con el código
                 encontrado = true;
                 if (mascota.getDuenio() != null && mascota.getDuenio().getCedula() == cedula) {
+                    app.openPantallaMascota();
                     return true;
                 } else {
                     mostrarError("El dueño no coincide con la cédula.");

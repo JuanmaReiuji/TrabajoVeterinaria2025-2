@@ -173,6 +173,91 @@ public void openPantallaLoginRecepcionista() {
         }
     }
 
+    public void openPantallaRecepcionista() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/co/uniquindio/edu/co/trabajoveterinaria20252/pantallaRecepcionista.fxml"));
+            AnchorPane rootLayout = loader.load();
+
+            pantallaRecepcionistaViewController pantallaRecepcionistaViewController = loader.getController();
+            pantallaRecepcionistaViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.show();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void openPantallaPropietario() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/co/uniquindio/edu/co/trabajoveterinaria20252/pantallaPropietario.fxml"));
+            AnchorPane rootLayout = loader.load();
+
+            pantallaPropietarioViewController pantallaPropietarioViewController = loader.getController();
+            pantallaPropietarioViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.show();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void openPantallaMascota() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/co/uniquindio/edu/co/trabajoveterinaria20252/pantallaMascota.fxml"));
+            AnchorPane rootLayout = loader.load();
+
+            pantallaMascotaViewController pantallaMascotaViewController = loader.getController();
+            pantallaMascotaViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.show();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void openPantallaVeterinario() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/co/uniquindio/edu/co/trabajoveterinaria20252/pantallaVeterinario.fxml"));
+            AnchorPane rootLayout = loader.load();
+
+            pantallaVeterinarioViewController pantallaVeterinarioViewController = loader.getController();
+            pantallaVeterinarioViewController.setApp(this);
+
+            Scene scene = new Scene(rootLayout);
+
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.show();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
 
 
 

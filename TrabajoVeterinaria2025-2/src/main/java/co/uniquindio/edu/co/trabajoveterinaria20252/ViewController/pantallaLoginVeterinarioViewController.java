@@ -56,7 +56,9 @@ public class pantallaLoginVeterinarioViewController {
             if (propietario.getCedula() == cedula) {
                 encontrado = true;
                 if (propietario.getContrasenia().equals(contrasenia) && propietario.getContrasenia().equals(contrasenia)) {
+                    app.openPantallaVeterinario();
                     return true;
+                    
                 } else {
                     mostrarError("Credenciales incorrectas.");
                     return false;

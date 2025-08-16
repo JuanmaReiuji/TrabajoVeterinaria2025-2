@@ -53,6 +53,7 @@ public class pantallaLoginRecepcionistaViewController {
 
         if (this.recepcionista != null && this.recepcionista.getCedula() == cedula
                 && this.recepcionista.getContrasenia().equals(contrasenia)) {
+            app.openPantallaRecepcionista();
             return true;
         }
 

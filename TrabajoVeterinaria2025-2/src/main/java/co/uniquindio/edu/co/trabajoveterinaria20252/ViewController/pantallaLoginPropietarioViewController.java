@@ -57,7 +57,9 @@ public class pantallaLoginPropietarioViewController {
             if (propietario.getCedula() == cedula) {
                 encontrado = true;
                 if (propietario.getContrasenia().equals(contrasenia) && propietario.getContrasenia().equals(contrasenia)) {
+                    app.openPantallaBienvenida();
                     return true;
+
                 } else {
                     mostrarError("Credenciales incorrectas.");
                     return false;
