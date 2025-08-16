@@ -5,13 +5,15 @@ public abstract class Persona {
     private int cedula;
     private int telefono;
     private String direccion;
+    private String contrasenia;
 
 
-    public Persona(String nombre, int cedula, String direccion, int telefono) {
+    public Persona(String nombre, int cedula, String direccion, int telefono, String contrasenia) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.contrasenia = contrasenia;
     }
 
     public String getNombre() {
@@ -46,11 +48,19 @@ public abstract class Persona {
         this.direccion = direccion;
     }
 
+    public String getContrasenia() {
+        return contrasenia;
+    }
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
     @Override
     public String toString() {
         return "nombre: " + nombre +
                 ", cedula: " + cedula +
                 ", telefono: " + telefono +
-                ", direccion:" + direccion;
+                ", direccion:" + direccion +
+                ", contrasenia:" + contrasenia;
     }
 }

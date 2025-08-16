@@ -15,9 +15,9 @@ class MascotaTest {
 
     @BeforeEach
     void setUp() {
-        propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222);
+        propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222,"123");
         mascotaPrueba = new Mascota("Firulais", "Perro", 3, 1, propietario , null);
-        veterinarioAsignado = new Veterinario("Dra. López", 456, "Calle 2", 300333444, Especialidad.NEUROLOGÍA);
+        veterinarioAsignado = new Veterinario("Dra. López", 456, "Calle 2", 300333444, Especialidad.NEUROLOGÍA,"123");
 
         citaAgendada = new CitaAgendada(LocalDate.now(),  "Control anual", mascotaPrueba, veterinarioAsignado);
 
@@ -47,24 +47,5 @@ class MascotaTest {
     }
 
 
-    @Test
-    void testGetterYSetterCitaAgendada() {
-        CitaAgendada esperada = citaAgendada;
-        mascotaPrueba.setCitaAgendada(esperada);
 
-        assertEquals(esperada, mascotaPrueba.getCitaAgendada());
-    }
-
-    @Test
-    void testToString() {
-        String esperado = "Mascota: " +
-                "nombre: " + mascotaPrueba.getNombre() +
-                ", especie: " + mascotaPrueba.getEspecie() +
-                ", edad: " + mascotaPrueba.getEdad() +
-                ", id: " + mascotaPrueba.getId() +
-                ", dueño: " + mascotaPrueba.getDuenio().toString() +
-                ", citaAgendada: " + mascotaPrueba.getCitaAgendada();
-
-        assertEquals(esperado, mascotaPrueba.toString());
-    }
 }

@@ -10,15 +10,15 @@ class RecepcionistaTest {
 
     @BeforeEach
     void setUp() {
-        recepcionistaPrueba = new Recepcionista("Lina", 3212, "Calle X", 3321, "xyz321");
+        recepcionistaPrueba = new Recepcionista("Lina", 3212, "Calle X", 3321,"123");
     }
 
     @Test
     void testGetYSetContraseniaUnica() {
-        String esperado = "abc123";
-        recepcionistaPrueba.setContraseniaUnica(esperado);
+        String esperado = "123";
+        recepcionistaPrueba.setContrasenia(esperado);
 
-        assertEquals(esperado, recepcionistaPrueba.getContraseniaUnica());
+        assertEquals(esperado, recepcionistaPrueba.getContrasenia());
     }
 
     @Test

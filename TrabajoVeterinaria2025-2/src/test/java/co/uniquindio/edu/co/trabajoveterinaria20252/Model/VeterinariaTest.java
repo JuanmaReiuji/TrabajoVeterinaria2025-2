@@ -25,8 +25,8 @@ class VeterinariaTest {
 
         veterinaria = new Veterinaria("Vet UQ", 12345, recepcionista);
 
-        propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222);
-        veterinario = new Veterinario("Dra. López", 456, "Calle 2", 300333444, Especialidad.NEUROLOGÍA);
+        propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222,"123");
+        veterinario = new Veterinario("Dra. López", 456, "Calle 2", 300333444, Especialidad.NEUROLOGÍA,"123");
 
         // La mascota se crea sin cita inicialmente (null)
         mascota = new Mascota("Firulais", "Perro", 3, 1, propietario, null);

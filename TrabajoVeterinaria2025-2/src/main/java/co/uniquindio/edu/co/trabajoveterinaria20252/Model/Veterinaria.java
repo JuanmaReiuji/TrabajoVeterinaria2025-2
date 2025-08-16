@@ -147,7 +147,7 @@ public class Veterinaria {
 
     //Metodos relacionados a la recepcionista
     public boolean loginRecepcionista(String cedula, String contraseniaUnica){
-        return cedula.equals(recepcionista.getCedula()) && contraseniaUnica.equals(recepcionista.getContraseniaUnica());
+        return cedula.equals(recepcionista.getCedula()) && contraseniaUnica.equals(recepcionista.getContrasenia());
     }
 
 

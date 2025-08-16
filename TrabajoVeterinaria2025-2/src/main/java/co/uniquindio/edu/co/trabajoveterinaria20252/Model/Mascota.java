@@ -6,15 +6,16 @@ public class Mascota {
     private int edad;
     private int id;
     private Persona duenio;
-    private CitaAgendada citaAgendada;
+    private String codigo;
 
-    public Mascota(String nombre, String especie, int edad, int id, Persona duenio, CitaAgendada citaAgendada) {
+    public Mascota(String nombre, String especie, int edad, int id, Persona duenio,String codigo) {
         this.nombre = nombre;
         this.especie = especie;
         this.edad = edad;
         this.id = id;
         this.duenio = duenio;
-        this.citaAgendada = citaAgendada;
+
+        this.codigo = codigo;
     }
 
     public String getNombre() {
@@ -57,12 +58,11 @@ public class Mascota {
         this.duenio = duenio;
     }
 
-    public CitaAgendada getCitaAgendada() {
-        return citaAgendada;
+    public String getCodigo() {
+        return codigo;
     }
-
-    public void setCitaAgendada(CitaAgendada citaAgendada) {
-        this.citaAgendada = citaAgendada;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     @Override
@@ -73,7 +73,7 @@ public class Mascota {
                 ", edad: " + edad +
                 ", id: " + id +
                 ", dueño: " + duenio +
-                ", citaAgendada: " + citaAgendada;
+                ", codigo: " + codigo;
     }
 }
 

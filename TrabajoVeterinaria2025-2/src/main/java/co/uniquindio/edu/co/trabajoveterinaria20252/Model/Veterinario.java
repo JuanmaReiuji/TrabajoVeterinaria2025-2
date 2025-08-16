@@ -9,8 +9,8 @@ public class Veterinario extends Persona {
     private List<CitaReporte> listaCitasReportadas;
 
 
-    public Veterinario(String nombre, int cedula, String direccion, int telefono, Especialidad especialidad) {
-        super(nombre, cedula, direccion, telefono);
+    public Veterinario(String nombre, int cedula, String direccion, int telefono, Especialidad especialidad,String contrasenia) {
+        super(nombre, cedula, direccion, telefono, contrasenia);
         this.especialidad = especialidad;
         this.citaAgendadas = new ArrayList<>();
         this.listaCitasReportadas = new ArrayList<>();

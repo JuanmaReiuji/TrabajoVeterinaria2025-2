@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class Propietario extends Persona {
     private List<Mascota> listaMascotas;
 
-    public Propietario(String nombre, int cedula, String direccion, int telefono) {
-        super(nombre, cedula, direccion, telefono);
+    public Propietario(String nombre, int cedula, String direccion, int telefono, String contrasenia) {
+        super(nombre, cedula, direccion, telefono, contrasenia);
         this.listaMascotas = new ArrayList<>();
     }
 

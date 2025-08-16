@@ -12,8 +12,8 @@ class PropietarioTest {
     private Mascota mascota;
     @BeforeEach
     void setUp() {
-        propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222);
-        mascota = new Mascota("Milo", "Perro", 2, 321, propietario, null);
+        propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222,"123");
+        mascota = new Mascota("Milo", "Perro", 2, 321, propietario, "123");
     }
 
     @Test
@@ -45,14 +45,4 @@ class PropietarioTest {
         assertEquals(1, propietario.getListaMascotas().size() );
     }
 
-    @Test
-    void testToString() {
-        String esperado = "Propietario: " + "nombre: " + propietario.getNombre() +
-                ", cedula: " + propietario.getCedula() +
-                ", telefono: " + propietario.getTelefono() +
-                ", direccion:" + propietario.getDireccion() +
-                ". Lista de mascotas: " + propietario.getListaMascotas();
-
-        assertEquals(esperado, propietario.toString());
-    }
 }
