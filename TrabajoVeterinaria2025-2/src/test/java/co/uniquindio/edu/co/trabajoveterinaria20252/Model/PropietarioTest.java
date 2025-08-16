@@ -13,7 +13,7 @@ class PropietarioTest {
     @BeforeEach
     void setUp() {
         propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222,"123");
-        mascota = new Mascota("Milo", "Perro", 2, 321, propietario, "123");
+        mascota = new Mascota("Milo", "Perro", 2, 321, propietario);
     }
 
     @Test

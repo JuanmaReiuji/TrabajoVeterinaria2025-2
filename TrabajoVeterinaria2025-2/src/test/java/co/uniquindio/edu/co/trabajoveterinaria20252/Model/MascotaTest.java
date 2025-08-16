@@ -16,7 +16,7 @@ class MascotaTest {
     @BeforeEach
     void setUp() {
         propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222,"123");
-        mascotaPrueba = new Mascota("Firulais", "Perro", 3, 1, propietario , null);
+        mascotaPrueba = new Mascota("Firulais", "Perro", 3, 1, propietario);
         veterinarioAsignado = new Veterinario("Dra. López", 456, "Calle 2", 300333444, Especialidad.NEUROLOGÍA,"123");
 
         citaAgendada = new CitaAgendada(LocalDate.now(),  "Control anual", mascotaPrueba, veterinarioAsignado);

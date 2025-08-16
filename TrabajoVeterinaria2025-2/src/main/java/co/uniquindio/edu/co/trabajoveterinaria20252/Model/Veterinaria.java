@@ -8,17 +8,16 @@ import java.util.Optional;
 public class Veterinaria {
     private String nombre;
     private int nit;
-    private Recepcionista recepcionista;
     private List<Persona> listaPropietarios;
     private List<Persona> listaVeterinarios;
     private List<Mascota> listaMascotas;
     private List<CitaAgendada> citasAgendadas;
     private List<CitaReporte> listaReportesCitas;
 
-    public Veterinaria(String nombre, int nit, Recepcionista recepcionista) {
+    public Veterinaria(String nombre, int nit) {
         this.nombre = nombre;
         this.nit = nit;
-        this.recepcionista = recepcionista;
+
         this.listaPropietarios = new ArrayList<>();
         this.listaVeterinarios = new ArrayList<>();
         this.listaMascotas = new ArrayList<>();
@@ -40,14 +39,6 @@ public class Veterinaria {
 
     public void setNit(int nit) {
         this.nit = nit;
-    }
-
-    public Recepcionista getRecepcionista() {
-        return recepcionista;
-    }
-
-    public void setRecepcionista(Recepcionista recepcionista) {
-        this.recepcionista = recepcionista;
     }
 
     public List<Persona> getListaPropietarios() {
@@ -145,11 +136,6 @@ public class Veterinaria {
         }
     }
 
-    //Metodos relacionados a la recepcionista
-    public boolean loginRecepcionista(String cedula, String contraseniaUnica){
-        return cedula.equals(recepcionista.getCedula()) && contraseniaUnica.equals(recepcionista.getContrasenia());
-    }
-
 
     //Metodos relacionados a las consultas
     public boolean agendarCita(CitaAgendada nuevaCita) {
@@ -223,7 +209,6 @@ public class Veterinaria {
     public String toString() {
         return "Veterinaria" + nombre +
                 ", nit: " + nit +
-                ", recepcionista: " + recepcionista +
                 ".\nLista de propietarios: " + listaPropietarios +
                 ".\nLista de veterinarios: " + listaVeterinarios +
                 ".\nLista de mascotas: " + listaMascotas +

@@ -8,14 +8,13 @@ public class Mascota {
     private Persona duenio;
     private String codigo;
 
-    public Mascota(String nombre, String especie, int edad, int id, Persona duenio,String codigo) {
+    public Mascota(String nombre, String especie, int edad, int id, Persona duenio) {
         this.nombre = nombre;
         this.especie = especie;
         this.edad = edad;
         this.id = id;
         this.duenio = duenio;
 
-        this.codigo = codigo;
     }
 
     public String getNombre() {
@@ -58,12 +57,7 @@ public class Mascota {
         this.duenio = duenio;
     }
 
-    public String getCodigo() {
-        return codigo;
-    }
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
+
 
     @Override
     public String toString() {
@@ -72,8 +66,7 @@ public class Mascota {
                 ", especie: " + especie +
                 ", edad: " + edad +
                 ", id: " + id +
-                ", dueño: " + duenio +
-                ", codigo: " + codigo;
+                ", dueño: " + duenio;
     }
 }
 

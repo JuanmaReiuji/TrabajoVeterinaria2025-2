@@ -23,13 +23,13 @@ class VeterinariaTest {
         // Recepcionista requerido por el constructor de Veterinaria
         recepcionista = new Recepcionista("Ana", 999, "Cra 1 #2-3", 300000000, "abc123");
 
-        veterinaria = new Veterinaria("Vet UQ", 12345, recepcionista);
+        veterinaria = new Veterinaria("Vet UQ", 12345);
 
         propietario = new Propietario("Juan Pérez", 123, "Calle 1", 300111222,"123");
         veterinario = new Veterinario("Dra. López", 456, "Calle 2", 300333444, Especialidad.NEUROLOGÍA,"123");
 
         // La mascota se crea sin cita inicialmente (null)
-        mascota = new Mascota("Firulais", "Perro", 3, 1, propietario, null);
+        mascota = new Mascota("Firulais", "Perro", 3, 1, propietario);
     }
 
 
@@ -192,24 +192,17 @@ class VeterinariaTest {
         assertTrue(veterinaria.buscarCitasMascota(mascota));
 
         // Mascota existe pero sin citas: el método actual imprime lista vacía y retorna true
-        Mascota otra = new Mascota("Mishu", "Gato", 2, 2, propietario, null);
+        Mascota otra = new Mascota("Mishu", "Gato", 2, 2, propietario);
         veterinaria.registrarMascota(otra);
         assertTrue(veterinaria.buscarCitasMascota(otra));
     }
 
-    // ---------- LOGIN RECEPCIONISTA ----------
-    @Test
-    void testLoginRecepcionista_conCredencialesCorrectas_actualmenteFallaPorCompararStringVsInt() {
-        String cedulaComoString = String.valueOf(recepcionista.getCedula());
-        assertFalse(veterinaria.loginRecepcionista(cedulaComoString, "abc123"));
-    }
 
     // ---------- TOSTRING ----------
     @Test
     void testToString(){
         String esperado = "VeterinariaVet UQ" +
                 ", nit: 12345" +
-                ", recepcionista: " + recepcionista +
                 ".\nLista de propietarios: []" +
                 ".\nLista de veterinarios: []" +
                 ".\nLista de mascotas: []" +
