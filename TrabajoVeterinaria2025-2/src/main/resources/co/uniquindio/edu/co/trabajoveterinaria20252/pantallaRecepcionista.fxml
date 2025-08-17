@@ -1,14 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.uniquindio.edu.co.trabajoveterinaria20252.ViewController.pantallaRecepcionistaViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.edu.co.trabajoveterinaria20252.ViewController.pantallaRecepcionistaViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="109.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
+      <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Gestión de Citas">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdd2d7" height="54.0" layoutX="965.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
+                        <TableView fx:id="tvCitasAgendadas" layoutY="80.0" prefHeight="611.0" prefWidth="965.0">
+                          <columns>
+                            <TableColumn fx:id="tbMascotaAgendada" prefWidth="150.0" text="Mascota" />
+                            <TableColumn fx:id="tbVeterinarioAgendado" prefWidth="212.0" text="Veterinario" />
+                              <TableColumn fx:id="tbFechaAgendada" prefWidth="168.0" text="Fecha" />
+                              <TableColumn fx:id="tbMotivoAgendado" prefWidth="434.0" text="Motivo" />
+                          </columns>
+                        </TableView>
+                        <DatePicker fx:id="dpFecha" layoutX="984.0" layoutY="190.0" prefHeight="46.0" prefWidth="256.0" />
+                        <Text layoutX="1026.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agendar Cita:">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1078.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1064.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mascota:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cbMascota" layoutX="1036.0" layoutY="304.0" prefWidth="150.0" />
+                        <Text layoutX="1053.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veterinario:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cbVeterinario" layoutX="1039.0" layoutY="405.0" prefWidth="150.0" />
+                        <Text layoutX="1071.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motivo:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="tfMotivo" layoutX="1014.0" layoutY="502.0" prefHeight="101.0" prefWidth="200.0" />
+                        <Button layoutX="1079.0" layoutY="623.0" mnemonicParsing="false" onAction="#agendarCita" text="Agendar Cita" />
+                        <Text fill="WHITE" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestión de Citas">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Gestión de Mascotas">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdd2d7" height="54.0" layoutX="965.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
+                        <TableView fx:id="tvMascotas" layoutY="80.0" prefHeight="611.0" prefWidth="965.0">
+                           <columns>
+                              <TableColumn fx:id="tbNombreMascota" prefWidth="279.0" text="Nombre" />
+                              <TableColumn fx:id="tbEspecieMascota" prefWidth="249.0" text="Especie" />
+                              <TableColumn fx:id="tbEdadMascota" prefWidth="229.0" text="Edad" />
+                              <TableColumn fx:id="tbDuenio" prefWidth="207.0" text="Dueño" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="1010.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Mascotas">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="1079.0" layoutY="623.0" mnemonicParsing="false" onAction="#agregarMascota" text="Agregar Mascota" />
+                        <Text fill="WHITE" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestión de Mascotas">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1087.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfNombreMascota" layoutX="1009.0" layoutY="171.0" prefHeight="25.0" prefWidth="226.0" />
+                        <Text layoutX="1093.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Especie:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfEspecie" layoutX="1009.0" layoutY="241.0" prefHeight="25.0" prefWidth="226.0" />
+                        <TextField fx:id="tfEdad" layoutX="1009.0" layoutY="316.0" prefHeight="25.0" prefWidth="226.0" />
+                        <Text layoutX="1096.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dueño:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cbDuenio" layoutX="1047.0" layoutY="501.0" prefWidth="150.0" />
+                        <Text layoutX="1100.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edad:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Historial de Citas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Historial de Citas">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tvCitasReporte" layoutY="80.0" prefHeight="581.0" prefWidth="1280.0">
+                           <columns>
+                              <TableColumn fx:id="tbMascotaReporte" prefWidth="253.0" text="Mascota" />
+                              <TableColumn fx:id="tbVeterinarioReporte" prefWidth="303.0" text="Veterinario" />
+                              <TableColumn fx:id="tbTratamientoReporte" prefWidth="440.0" text="Tratamiento Indicado" />
+                              <TableColumn fx:id="tbFechaReporte" prefWidth="186.0" text="Fecha" />
+                              <TableColumn fx:id="tbAsistencia" prefWidth="97.0" text="Asistencia" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Gestión Veterinarios">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdd2d7" height="54.0" layoutX="965.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0" />
+                        <TableView fx:id="tvVeterinarios" layoutY="80.0" prefHeight="611.0" prefWidth="965.0">
+                           <columns>
+                              <TableColumn fx:id="tbNombreVeterinario" prefWidth="279.0" text="Nombre" />
+                              <TableColumn fx:id="tbCedulaVeterinario" prefWidth="249.0" text="Cédula" />
+                              <TableColumn fx:id="tbEspecialidadVeterinario" prefWidth="229.0" text="Especialidad" />
+                              <TableColumn fx:id="tbTelefonoVeterinario" prefWidth="207.0" text="Teléfono" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="1010.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Veterinario">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="1062.0" layoutY="625.0" mnemonicParsing="false" onAction="#agregarVeterinario" text="Agregar Veterinario" />
+                        <Text fill="WHITE" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestión de Veterinarios">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1087.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfNombreVeterinario" layoutX="1009.0" layoutY="171.0" prefHeight="25.0" prefWidth="226.0" />
+                        <Text layoutX="1093.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfCedulaVeterinario" layoutX="1009.0" layoutY="241.0" prefHeight="25.0" prefWidth="226.0" />
+                        <Text layoutX="1085.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfTelefonoVeterinario" layoutX="1009.0" layoutY="316.0" prefHeight="25.0" prefWidth="226.0" />
+                        <Text layoutX="1071.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Especialidad:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cbEspecialidadVeterinario" layoutX="1047.0" layoutY="501.0" prefWidth="150.0" />
+                        <Text layoutX="1073.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña::">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfContraseniaVeterinario" layoutX="1009.0" layoutY="416.0" prefHeight="25.0" prefWidth="226.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="1226.0" layoutY="692.0" mnemonicParsing="false" onAction="#openPantallaBienvenida" prefHeight="28.0" prefWidth="54.0" text="Salir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1226.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="692.0" />
+   </children>
 </AnchorPane>

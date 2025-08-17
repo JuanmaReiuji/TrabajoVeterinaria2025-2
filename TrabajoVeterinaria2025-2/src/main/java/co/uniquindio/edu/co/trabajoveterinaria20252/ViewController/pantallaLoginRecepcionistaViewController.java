@@ -1,10 +1,12 @@
 package co.uniquindio.edu.co.trabajoveterinaria20252.ViewController;
 
 import co.uniquindio.edu.co.trabajoveterinaria20252.App;
+import co.uniquindio.edu.co.trabajoveterinaria20252.Model.CitaAgendada;
 import co.uniquindio.edu.co.trabajoveterinaria20252.Model.Persona;
 import co.uniquindio.edu.co.trabajoveterinaria20252.Model.Recepcionista;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class pantallaLoginRecepcionistaViewController {
@@ -16,6 +18,7 @@ public class pantallaLoginRecepcionistaViewController {
     TextField tfCedula;
     @FXML
     TextField tfContrasenia;
+
 
     public void setApp(App app) {
         this.app = app;
